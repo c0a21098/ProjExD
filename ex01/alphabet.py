@@ -8,6 +8,7 @@ g=True
 max_n=10
 def alphabet_game():
     global g
+    g=True
     a=[]
     for i in range(65,91):
         a.append(chr(i))
@@ -22,15 +23,14 @@ def alphabet_game():
     n=input("欠損文字はいくつあるでしょうか？")
     if int(n)==mn:
         print("正解です。それでは、具体的に欠損文字を１つずつ入力してください")
-        for i in range(len(mn)):
+        for i in range(mn):
             a=input(f"{i+1}つ目の文字を入力してください:")
-            if a in h:
-                h.remove(a)
+            if not a in h and a in t:
+                continue
             else:
                 print("不正解です。またチャレンジしてください")
                 g=False
                 return 
-
     else:
         print("不正解です。またチャレンジしてください")
         g=False
@@ -40,7 +40,8 @@ def alphabet_game():
 
 
 
-if __name__ =="__main__":
+
+def main():
     st=datetime.datetime.now()
     a=0
     t=0
@@ -49,8 +50,13 @@ if __name__ =="__main__":
         if g==True:
             ed=datetime.datetime.now()
             print("ゲームクリアです")
-            print((ed-st).second)
+            print((ed-st).seconds)
             a=1
         else:
             if t<=max_n:
                 t+=1
+            else:
+                break
+
+if __name__ =="__main__":
+    main()
