@@ -8,3 +8,4 @@ def shutudai():
         print("正解！！！")
     else:
         print("出直してこい")
+shutudai()
