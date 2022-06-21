@@ -7,6 +7,7 @@ def button_click(event):
     btn=event.widget
     num=btn["text"]
     #tkm.showinfo("",f"{num}のボタンがクリックされました")
+    entry.insert(tk.END,num)
 if __name__ == "__main__":
     root = tk.Tk()
     root.title("超高機能電卓")
