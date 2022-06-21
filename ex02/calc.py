@@ -40,7 +40,7 @@ if __name__ == "__main__":
     entry.grid(row=0,column=0,columnspan=4)
 
     r,c=1,0      #ｒ：行番号　ｃ：列番号
-    for i,num in enumerate([9,8,7,"AC",6,5,4,"税込",3,2,1,"+",0,"","","="]):
+    for i,num in enumerate([9,8,7,"AC",6,5,4,"税込",3,2,1,"+","",0,"","="]):
         btn = tk.Button(root,    #各ボタンの作成
                     text = f"{num}",
                     width=4,
