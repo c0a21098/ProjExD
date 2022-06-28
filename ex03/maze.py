@@ -52,8 +52,9 @@ if __name__ == "__main__":
     tori = tk.PhotoImage(file=f"fig/{random.randint(0,9)}.png")
     mx, my = 1, 1
     cx, cy = mx*100+50, my*100+50
-    canvas.create_image(cx, cy, image=tori, tag="tori")
     canvas.create_text(cx,cy,text="START",anchor="center",font=("Times",20))
+    canvas.create_image(cx, cy, image=tori, tag="tori")
+    
     canvas.create_text(13*100+50,7*100+50,text="GOAL",anchor="center",font=("Times",20))
     key = ""
 
