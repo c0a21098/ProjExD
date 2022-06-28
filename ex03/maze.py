@@ -13,7 +13,7 @@ def key_up(event):
     #print(f"{key}が離されました")
 
 def main_proc():
-    global mx, my, cx, cy, tori
+    global mx, my, cx, cy
     delta = {
         "":[0,0],
         "Up":[0,-1],  #キー：押されたキー、値：移動幅リスト[x,y]
