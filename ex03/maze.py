@@ -4,9 +4,12 @@ import tkinter.messagebox as tkm
 def key_down(event):
     global key
     key = event.keysym
-    print(f"{key}が押されました")
+    #print(f"{key}が押されました")
 
-
+def key_up(event):
+    global key
+    key = ""
+    #print(f"{key}が離されました")
 
 
 if __name__ == "__main__":
@@ -26,4 +29,5 @@ if __name__ == "__main__":
     key = ""
 
     root.bind("<KeyPress>",key_down)
+    root.bind("<KeyRelease>", key_up)
     root.mainloop()
