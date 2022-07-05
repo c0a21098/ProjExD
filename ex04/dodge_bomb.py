@@ -9,6 +9,11 @@ def main():
     bgimg_rct = bgimg_sfc.get_rect()              #Rect
     screen_sfc.blit(bgimg_sfc, bgimg_rct)
 
+    while True:
+        screen_sfc.blit(bgimg_sfc,bgimg_rct)
+
+        for event in pg.event.get():
+            if event.type == pg.QUIT:return
 
 
 
