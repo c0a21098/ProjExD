@@ -62,6 +62,8 @@ def main():
         vx*=yoko
         vy*=tate
 
+        if kkimg_rct.colliderect(bmimg_rct): return
+
         pg.display.update()
         clock.tick(1000)
 
