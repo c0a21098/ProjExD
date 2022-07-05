@@ -62,6 +62,7 @@ def main():
                 kkimg_rct.centerx -=1
 
         bmimg_rct.move_ip(vx, vy)
+
         bmimg_rct2.move_ip(vx2,vy2)
 
         screen_sfc.blit(kkimg_sfc,kkimg_rct)
@@ -77,7 +78,7 @@ def main():
         if check_bound(bmimg_rct, screen_rct) !=(1,1):
             vx*=1.1
             vy*=1.1
-        yoko, tate = check_bound(bmimg_rct2, screen_rct)
+        yoko, tate =  check_bound(bmimg_rct2, screen_rct)
         vx2*=yoko
         vy2*=tate
         if check_bound(bmimg_rct2, screen_rct) !=(1,1):
