@@ -36,13 +36,13 @@ def main():
 
         key_states = pg.key.get_pressed()  #辞書
         if key_states[pg.K_UP] == True:         #上下左右のキーが押されたらこうかとんが移動する
-            kkimg_rct.centery -=1
+            kkimg_rct.centery -=1               #上が押されたら上に移動する
         if key_states[pg.K_DOWN] == True:
-            kkimg_rct.centery +=1
+            kkimg_rct.centery +=1               #下が押されたら下に移動する
         if key_states[pg.K_LEFT] == True:
-            kkimg_rct.centerx -=1
+            kkimg_rct.centerx -=1               #左が押されたら左に移動する
         if key_states[pg.K_RIGHT] == True:
-            kkimg_rct.centerx +=1
+            kkimg_rct.centerx +=1               #右が押されたら右に移動する
         if check_bound(kkimg_rct, screen_rct) !=(1, 1):
             if key_states[pg.K_UP] == True:         
                 kkimg_rct.centery +=1
